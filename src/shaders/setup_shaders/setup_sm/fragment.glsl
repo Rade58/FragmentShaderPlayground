@@ -8,7 +8,7 @@ varying vec2 vUv;
 void main() {
 
   
-  // you can use `round` because it is available only when using ShaderMaterial
+  // you can use round because it is available only when using ShaderMaterial
   // not available when using RawShaderMaterial
   float strength = round(vUv.x * 10.0) / 10.0;
 

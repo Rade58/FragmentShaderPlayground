@@ -3,8 +3,8 @@ import * as THREE from "three";
 import GUI from "lil-gui";
 import { OrbitControls } from "three/examples/jsm/Addons.js";
 
-import vertexShader from "./shaders/gray_rainbow/vertex.glsl";
-import fragmentShader from "./shaders/gray_rainbow/fragment.glsl";
+import vertexShader from "../shaders/setup_shaders/setup_sm/vertex.glsl";
+import fragmentShader from "../shaders/setup_shaders/setup_sm/fragment.glsl";
 
 // ---- Setup ----
 // Using ShaderMaterial (not RawShaderMaterial, we have other setup where we use it)
@@ -102,11 +102,11 @@ if (canvas) {
     // wireframe: true,
     side: THREE.DoubleSide,
 
-    uniforms: {
+    /* uniforms: {
       uColor: {
         value: new THREE.Color("crimson"),
       },
-    },
+    }, */
   });
 
   const mesh = new THREE.Mesh(geometry, material);
@@ -294,8 +294,8 @@ if (canvas) {
   const clock = new THREE.Clock();
 
   function tick() {
-    const elapsed = clock.elapsedTime;
-    const delta = clock.getDelta();
+    // const elapsed = clock.elapsedTime;
+    // const delta = clock.getDelta();
 
     /* material.uniforms["uFrequency"].value = new THREE.Vector2(
       10 * elapsed,

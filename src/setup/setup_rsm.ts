@@ -3,8 +3,8 @@ import * as THREE from "three";
 import GUI from "lil-gui";
 import { OrbitControls } from "three/examples/jsm/Addons.js";
 
-import vertexShader from "../shaders/setup_shaders/setup_rsm/vertex.glsl";
-import fragmentShader from "../shaders/setup_shaders/setup_rsm/fragment.glsl";
+import vertexShader from "./shaders/setup_rsm/vertex.glsl";
+import fragmentShader from "./shaders/setup_rsm/fragment.glsl";
 
 // -------------- Setup  -----------------
 // setup using ---- RawShaderMaterial ----

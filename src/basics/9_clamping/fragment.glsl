@@ -21,6 +21,9 @@ void main() {
   gl_FragColor = vec4(vec3(strength), 1.0);
   // --- VALUES ABOVE 1.0 WILL BE AUTOMATICALLY CLAMPED TO 1.0 ---
   // --- AND VALUES BELLOW 0.0 WILL BE AUTOMATICALLY CLAMPED TO BE 0.0 ---
+  // And in our case above since we multiplied with 10.0
+  // white color will be dominant in our gradient, you will se just a little
+  // of black at the left side
 
 
   // so in this next case for example -10.0 would be clamped to  0.0

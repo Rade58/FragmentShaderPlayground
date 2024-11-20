@@ -20,7 +20,10 @@ void main() {
 
   // strength = vUv.yy;
 
-  // strength = vUv.xy;    
+    // and combining x and y like this, makes gradient to be
+    // diagonal
+
+  strength = vUv.xy;    
 
   // strength = vUv.yx;
 

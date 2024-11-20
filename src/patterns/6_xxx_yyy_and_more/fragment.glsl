@@ -20,6 +20,8 @@ void main() {
   //                      other than black and white
   //                      some color will be part of the gradient
   
+  // and combining x and y like this, makes gradient to be
+  // diafgonal
 
   strength = vUv.yyx;
 

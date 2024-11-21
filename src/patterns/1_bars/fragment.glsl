@@ -9,11 +9,16 @@ void main() {
 
   // using modulo to get some interesting patterns
 
+  // 10 vertical fragments because we are using x
   float strength = mod(vUv.x * 10.0, 1.0);
+
+  // 10 horizontal fragments because we are using y
+  strength = mod(vUv.y * 10.0, 1.0);
 
   // same number of fragments but darker gray is prevalent
   strength = mod(vUv.x, 0.1);
 
+  // interesting
   strength = mod(vUv.y, vUv.x);
 
   // interesting

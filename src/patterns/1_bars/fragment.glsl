@@ -25,12 +25,14 @@ void main() {
   strength = mod(vUv.x, vUv.x);
   strength = mod(vUv.y, vUv.y);
 
-  // back to the first one
-  strength = mod(vUv.x * 10.0, 1.0);
+  // more segments
+  strength = mod(vUv.x * 20.0, 1.0);
 
   // this will just create mirror
-  // you won;t notice anything changed
-  strength = 1.0 - mod(vUv.x * 20.0, 1.0);
+  // you won't notice anything changed in terms of color
+  // but direction will be changed (try it few times and pay attention
+  // how direction changes)
+  strength = 1.0 - strength;
   
   gl_FragColor = vec4(vec3(strength), 1.0);
 

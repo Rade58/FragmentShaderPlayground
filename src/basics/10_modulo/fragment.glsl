@@ -21,9 +21,9 @@ void main() {
 
   // you can try just to memorize this
   // because most of the time you will use it like this
-
-  // 
   float strength = mod(vUv.x * 10.0, 1.0);
+
+  // this will make ten segments with same gradients inside
 
   gl_FragColor = vec4(vec3(strength), 1.0);
 

@@ -8,16 +8,18 @@ varying vec2 vUv;
 void main() {
 
   // to create better looking grid I parametarized some things
-  float grid_items_by_row_or_column = 10.0;
-  // to better center a grid
-  float grid_offset = 0.11;
+  float grid_items_by_row_or_column = 2.0;
+  
+  vec2 center = vec2(0.5, 0.5);
+
+  vec2 coords = vUv - center / grid_items_by_row_or_column / 2.0;
 
   float strengthX = mod(
-    vUv.x * grid_items_by_row_or_column,
+    coords.x * grid_items_by_row_or_column,
     1.0
   );
   float strengthY = mod(
-    vUv.y * grid_items_by_row_or_column,
+    coords.y * grid_items_by_row_or_column,
     1.0
   );
 

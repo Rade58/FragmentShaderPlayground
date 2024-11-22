@@ -41,7 +41,7 @@ void main() {
   float strength = step(0.5, strengthX) + step(0.5, strengthY);
 
   // to have white rectangles on black surface
-  strength = 1.0 - strength;
+  // strength = 1.0 - strength;
 
 
   gl_FragColor = vec4(vec3(strength), 1.0);

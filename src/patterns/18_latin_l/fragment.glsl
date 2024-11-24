@@ -20,8 +20,7 @@ void main() {
   float edgeX = 0.5;
   float edgeY = 0.5;
 
-  // well, first we know that one of the edge values needs to be
-  // smaller than the other
+  // instead of X, we will make Y value two times bigger (differnt from previous example)
   edgeY = 0.8;
   edgeX = edgeX / 2.0;
 
@@ -29,7 +28,6 @@ void main() {
   float grid_items = 10.0;
 
 
-  // we did this modulo the same in mentioned previous examples  
   float strengthY = mod(
     vUv.y * grid_items,
     1.0
@@ -40,24 +38,22 @@ void main() {
   );
 
 
-  // and pay attention, we use strengthY for both
-  // but we use different edge values
+  // here for strength we use both X values (diffrence from previous example)
   float byX = step(edgeX, strengthX);
   float byY = step(edgeY, strengthX);
 
-  // here we do mentioned multiplication I talked about
-  // but as you can see, we are only passing y value of strength
-  // a+d for the edge, we are mixing it as you can see x to y, and y to x
+  // instead of both X strenghths we use Y strenghts
+  // and we are incrementing
+  // (differnt from previous example)
   byX += step(edgeY, strengthY);
   byY += step(edgeX, strengthY);
 
 
-  // and here we doo addition operation
+  // and here we do multiplication, and we are doing substraction from 1.0
+  // (differnt from previous example)
   float strength = 1.0 - byY * byX;
 
 
-
   gl_FragColor = vec4(vec3(strength), 1.0);
-
 
 }

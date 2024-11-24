@@ -41,14 +41,14 @@ void main() {
   );
 
 
-  float byX = step(edgeX, strengthX);
-  float byY = step(edgeY, strengthY);
+  float maskX = step(edgeX, strengthX);
+  float maskY = step(edgeY, strengthY);
   
   // this is the second place we are changing things
   // instead of addition
-  float strength = byX + byY;
+  float strength = maskX + maskY;
   // we will do multiplication
-  strength = byX * byY;
+  strength = maskX * maskY;
 
 
   gl_FragColor = vec4(vec3(strength), 1.0);

@@ -21,8 +21,8 @@ void main() {
   // you will se why we use this  
   vec2 center = vec2(0.5, 0.5);
 
-  // I didnt came to this rationally
-  // I just try doing this kind of math on these values
+  // I didnt came to the final result in a rational way
+  // I just try doing this kind of math on these values (divisions bellow)
   // and it worked
   vec2 newvUv = vUv - center / grid_items / 2.0;
 

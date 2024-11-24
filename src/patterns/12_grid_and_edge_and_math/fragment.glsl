@@ -9,6 +9,7 @@ void main() {
 
   // idea between these exercise
   // is to show how rectagles change size as we change edge values
+  // (or to be precise how mask dimension changes)
   // also we can see what happens with pattern as we
   // do matematical operations on two step results
 
@@ -38,6 +39,9 @@ void main() {
 
   float strength = step(edgeX, strengthX);
   
+  // this is the part where we are doing different math with
+  // results of step
+
   // we can trey different operatiosn to see what will happen
   // strength += step(edgeY, strengthY);
   // strength -= step(edgeY, strengthY);
@@ -46,7 +50,7 @@ void main() {
 
 
 
-  // to have white rectangles on black surface
+  // also we can try this
   // strength = 1.0 - strength;
 
 

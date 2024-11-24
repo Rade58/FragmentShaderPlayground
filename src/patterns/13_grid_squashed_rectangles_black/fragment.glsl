@@ -8,7 +8,9 @@ varying vec2 vUv;
 void main() {
 
   // We want to accomplish to have squashed rectangles in our pattern
- 
+  // this will be the pattern with black rectangles on white background
+
+
   float edgeX = 0.5;
   float edgeY = edgeX;
 

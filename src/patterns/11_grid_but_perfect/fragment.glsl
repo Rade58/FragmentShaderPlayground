@@ -7,8 +7,15 @@ varying vec2 vUv;
 
 void main() {
 
+  // ** THIS WILL ONLY WORK IF OUR edge ARGUMENTS FOR step
+  // ARE BOTH THE SAME VALUES**
+  // so I isolate it here
+  float edge = 0.5;
+
+
+
   // well my grid from previous example isn't centered
-  // which means rectangles touch sides
+  // which means rectangles touch sides of the plane
 
 
   // to create better looking grid I parametarized some things
@@ -29,6 +36,7 @@ void main() {
   // esencially because of this above,
   // we will center our grid
 
+  // if you forgotm this is how we get repeting patterns
   float strengthX = mod(
     newvUv.x * grid_items,
     1.0
@@ -38,7 +46,7 @@ void main() {
     1.0
   );
 
-  float strength = step(0.5, strengthX) + step(0.5, strengthY);
+  float strength = step(edge, strengthX) + step(edge, strengthY);
 
   // to have white rectangles on black surface
   // strength = 1.0 - strength;

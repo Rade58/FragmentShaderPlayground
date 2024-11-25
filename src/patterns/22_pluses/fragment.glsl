@@ -7,6 +7,12 @@ varying vec2 vUv;
 
 void main() {
 
+  // I decided to parametarize even more, it is easer to see things
+  // I did it with strenghts, and I changed names of some variables
+  // to be easier to recognize how and where we use them
+
+
+  
   
   float edgeOne = 0.5;
   float edgeTwo = 0.5;

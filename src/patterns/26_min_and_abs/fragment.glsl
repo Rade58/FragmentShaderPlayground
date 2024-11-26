@@ -19,12 +19,7 @@ void main() {
   float strength = min(strengthX, strengthY);
 
   
-  // the greather value than the other value will be
-  // the result
-  strength = max(strengthX, strengthY);
-
-
-  // so you will again have some "diamond" or "tunnel" shapes
+  // so you will again have some "diamond pyramidic" gradient
   // since when gpu executes this shader,
   // sometimes first value is bigger than the second or vice versa
   // and we get some gradiet that goes in all 4 dirrections 

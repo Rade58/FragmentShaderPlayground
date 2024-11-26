@@ -25,7 +25,7 @@ void main() {
   // length = √(x² + y²)
 
   // so basically it will be the distance from (0.0 , 0.0) to the
-  // actual current vUv coordinate 
+  // actual current vUv coordinate (vUv.x, Vuv.y)
 
   float distanceFromCenter = length(vUv);
 

@@ -27,6 +27,9 @@ void main() {
 
   float strength = distanceFromZero;
 
+  // you can also try to invert it by substracting from 1.0
+  // strength = 1.0 - strength;  // in this case, white will be in center
+
 
   gl_FragColor = vec4(vec3(strength, strength, strength), 1.0);
 

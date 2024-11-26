@@ -5,16 +5,6 @@
 varying vec2 vUv;
 
 
-// copied from    https://thebookofshaders.com/10/
-// this function is pseudo random
-// not trully random since always will produce
-// same result, for the desired coordinates
-float random (vec2 st) {
-    return fract(sin(dot(st.xy,
-                         vec2(12.9898,78.233)))*
-        43758.5453123);
-}
-
 
 void main() {
 
@@ -27,12 +17,12 @@ void main() {
   // so basically it will be the distance from (0.0 , 0.0) to the
   // actual current vUv coordinate (vUv.x, Vuv.y)
 
-  float distanceFromCenter = length(vUv);
+  float distanceFromZero = length(vUv);
 
   // which will create circular gradient with center in (0.0, 0.0)
   // and most black will be in that center
 
-  float strength = distanceFromCenter;
+  float strength = distanceFromZero;
 
 
   gl_FragColor = vec4(vec3(strength, strength, strength), 1.0);

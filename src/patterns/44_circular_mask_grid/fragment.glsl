@@ -38,7 +38,12 @@ void main() {
   float strength = mask;
 
 
-// we will get grid of 10 x 10 black circles on white background
+  // we will get grid of 10 x 10 black circles on white background
+
+  // we can invert it at the end to have
+  // white circles on black background
+  strength = 1.0 - strength;
+
 
   gl_FragColor = vec4(vec3(strength), 1.0);
 }

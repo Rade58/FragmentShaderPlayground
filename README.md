@@ -1,5 +1,7 @@
 # Fragment Shaders Patterns Playground
 
+More refined and more in dept than: [original workshop follow-along-repo](https://github.com/Rade58/shaders_patterns)
+
 ```
 pnpm add lil-gui three
 ```
